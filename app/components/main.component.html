@@ -1,0 +1,17 @@
+<a routerLink="/"><h1>{{title}}</h1></a>
+
+<div>
+    <div *ngIf="selectedHero">
+        <app-heroes-detail [hero]="selectedHero"></app-heroes-detail>  
+    </div>
+    <a routerLink="/heroes">Heroes</a>
+    <router-outlet></router-outlet>
+    <!-- <app-heroes (select)="onSelect($event)" [selectedHero]="selectedHero">
+        ...here
+    </app-heroes> -->
+</div>
+
+<div style="display:none">
+    <app-test>
+    </app-test>
+</div>
